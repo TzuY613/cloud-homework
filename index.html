@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TensorFlow.js demo</title>
+  <!-- Import the webpage's stylesheet -->
+</head>  
+<body>
+  <section id="cameraSection">
+  <div id="StuID">Student ID:10627132</div>
+  <div id="status">loading model...</div>
+
+  <div>
+    <button id="enableWebcamButton" disabled>Open the camera</button>
+    <button id="disableWebcamButton" disabled>Close the camera</button>
+  </div>
+  <div id="liveView">  
+    <video id="webcam" autoplay width="320" height="240"></video>
+    <canvas id="outputCanvas"></canvas>
+  </div>
+  <div id="label-container"></div>
+</section>
+  <!-- Import TensorFlow.js library -->
+  <!-- Load TensorFlow.js. This is required to use MobileNet. -->
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.1"> </script>
+<!-- Load the MobileNet model. -->
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@1.0.0"> </script>
+<script async src="opencv.js" onload="onOpenCvReady();" type="text/javascript"></script>  
+
+  <!-- Import the page's JavaScript to do some stuff -->
+  <script src="hw2.js" defer></script>
+</body>
+</html>
